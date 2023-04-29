@@ -13,17 +13,19 @@ class Country:
 
 
 COUNTRIES: dict[str, Country] = {
-    "US": Country("US", "Everything Everywhere All at Once"),
+    "US": Country("US", "United States"),
     "CA": Country("CA", "Canada"),
     "MX": Country("MX", "Mexico"),
 }
 
 
-def listCountries():
-    print("Country List")
-    for country in COUNTRIES:
-        print(country)
-    print()
+def viewCountry():
+    print("Country codes: ", " ".join(COUNTRIES.keys()))
+    code = input("Code: ").upper()
+    if code not in COUNTRIES:
+        print(f"{code} not found.\n")
+        return
+    print(f"Country Name: {COUNTRIES[code].name}", "\n")
 
 
 def addCountry():
@@ -55,7 +57,7 @@ def menu():
     print("Country List Program")
     print()
     print("COMMAND MENU")
-    print("list - List all Countries")
+    print("view - View a Country")
     print("add  - Add a country")
     print("del  - Delete a country")
     print("exit - Exit program")
@@ -64,7 +66,7 @@ def menu():
 
 
 COMMANDS = {
-    "list": listCountries,
+    "view": viewCountry,
     "add": addCountry,
     "del": deleteCountry,
     "exit": exitProgram,
