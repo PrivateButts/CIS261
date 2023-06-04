@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: phase 3",
+            "name": "Python: phase 4",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/project/phase3.py",
+            "program": "${workspaceFolder}/project/phase4.py",
             "cwd": "${workspaceFolder}/project",
             "console": "integratedTerminal",
             "justMyCode": true
